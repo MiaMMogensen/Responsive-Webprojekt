@@ -1,0 +1,1595 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 0;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "PPNeueMachina-Light";
+    src: url(/fonts/PPNeueMachina-Light.ttf);
+}
+
+@font-face {
+    font-family: "PPNeueMachina-Ultrabold";
+    src: url(/fonts/PPNeueMachina-Ultrabold.ttf);
+}
+
+@font-face {
+    font-family: "Inter_18pt-Light";
+    src: url(/fonts/Inter_18pt-Light.ttf);
+}
+
+
+/* styling af header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+/* styling af logo */
+.logo img {
+    height: 45px;
+    width: auto;
+    margin-top: 6px;
+}
+
+/* styling af navigation og burger menu*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+}
+
+.burger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    display: block;
+}
+
+.burger-toggle:checked + .burger-menu + .menu {
+    display: flex;
+    z-index: 1;
+}
+
+.cart {
+    width: 60px;
+    height: auto;
+    display: none;
+}
+
+.cart-icon img {
+    width: 45px;
+    height: auto;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.login {
+    width: 60px;
+    height: auto;
+}
+
+/* styling af overskrifter */
+h1 {
+    font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+    font-size: 6.5rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.event-container h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    font-size: 4.5rem;
+}
+
+h4 {
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.underoverskrift {
+    position: absolute;
+    top: 15.8rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.underoverskrift-2 {
+    position: relative;
+    top: 9.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.underoverskrift-desktop {
+    display: none;
+}
+
+.about-overskrift {
+    font-size: 5.5rem;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.about-overskrift-desktop {
+    display: none;
+}
+
+/* styling af tekst */
+.shop-text {
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    font-size: 1.5rem;
+}
+
+.shop-text p {
+    margin-top: 0.5rem;
+    margin-left: 0;
+}
+
+.text-desktop {
+    display: none;
+}
+
+.forside-text {
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.forside-lille-text {
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+/* styling af forside */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+  .hero-video {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .hero h1 {
+    position: absolute;
+    font-size: 3rem;
+    color: #FFD700;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .boards {
+    padding: 4rem 2rem;
+    background-color: white;
+    color: black;
+  }
+  
+  .boards h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .boards-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .board-card {
+    text-align: center;
+  }
+  
+  .board-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+  }
+  
+  .view-more {
+    display: block;
+    width: 200px;
+    margin: 2rem auto 0;
+    padding: 0.75rem;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+  }
+  
+  .lyc-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(90deg, #FFD700 50%, black 50%);
+  }
+
+  .lyc-content {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .lyc-text {
+    background-color: black;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .lyc-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .read-more {
+    background-color: #FFD700;
+    border: none;
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+
+/* styling af content */
+.skateboard-billede {
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.t-shirt-billede {
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.shop-container {
+    text-align: center;
+}
+
+.event-container {
+    text-align: center;
+}
+
+.event-container h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.book-container h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 0;
+}
+
+.book-container p {
+    font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.event-billede {
+    width: 80%;
+    height: auto;
+}
+
+.event-tid {
+    width: 82%;
+    margin-left: 9%;
+    margin-bottom: 2rem;
+}
+
+.event-tid2 {
+    width: 84%;
+    margin-left: 8.5%;
+    margin-bottom: 2rem;
+}
+
+.event-tid3 {
+    width: 85%;
+    margin-left: 8.5%;
+    margin-bottom: 2rem;
+}
+
+/* styling af booking system */
+
+.booking-container {
+    max-width: 100%;          /* Allow container to take full screen width */
+    text-align: center;       /* Center-align text */
+    margin: 0;                /* No margin to bring it closer to the edge */
+    align-items: center;
+}
+
+.book-underoverskrift  {
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.book-overskrift {
+    font-size: 5.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+.calendar-box {
+    border: 1px solid #000;   /* Black border for calendar box */
+    padding: 2em;             /* Padding for inner spacing */
+    margin-bottom: 0.5em;     /* Reduced margin below the calendar box */
+    box-sizing: border-box;   /* Include padding in width calculation */
+    width: 90%;              /* Full width of the container */
+    display: inline-block;
+}
+
+.calendar-header {
+    display: flex;            /* Use flex to align dropdowns */
+    justify-content: center;  /* Center the dropdowns */
+    gap: 10px;                /* Space between dropdowns */
+    margin-bottom: 1em;       /* Space below header */
+}
+
+.month-dropdown {
+    font-size: 14px;              /* Font size for month dropdown */
+    font-weight: bold;            /* Make the text bold */
+    padding: 5px 20px 5px 10px;   /* Increase right padding to create more gap between arrow and edge */
+    background-color: #f0f0f0;    /* Grey background */
+    border: none;                 /* Remove border */
+    color: #008000;               /* Green text color */
+}
+
+.year-dropdown {
+    font-size: 14px;            /* Font size for year dropdown */
+    font-weight: bold;          /* Make the text bold */
+    height: 40px;               /* Match the height of the month dropdown */
+    padding: 5px 10px;          /* Top/Bottom: 5px, Right/Left: 10px for consistent spacing */
+    border: none;               /* No border */
+    color: #333;                /* Normal text color */
+}
+
+.weekdays {
+    display: grid;                        /* Grid layout for even spacing */
+    grid-template-columns: repeat(7, 1fr); /* 7 equal-width columns */
+    gap: 5px;                             /* Space between cells, uniform with the dates */
+    justify-items: center;                /* Center the grid items */
+    align-items: center;                  /* Align the grid items */
+    margin-bottom: 5px;                   /* Same margin as between date rows */
+}
+
+.weekdays div {
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar {
+    display: grid;                        /* Grid layout for even spacing */
+    grid-template-columns: repeat(7, 1fr); /* 7 equal-width columns */
+    gap: 5px;                             /* Space between cells */
+    justify-items: center;                /* Center the grid items */
+    align-items: center;                  /* Align the grid items */
+}
+
+.calendar-date {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;   /* Font size of the dates */
+    background-color: #ffffff;  /* White background */
+    color: #333;                /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for visual feedback */
+}
+
+.calendar-date.greyed {
+    color: #aaa;                 /* Grey text color for non-current month */
+    pointer-events: none;        /* Disable interaction */
+    cursor: default;             /* Default cursor to indicate it is not clickable */
+}
+
+/* Selected date styling */
+.calendar-date.selected {
+    background-color: #ffcc66;  /* Highlight color for selected date */
+    color: #ffffff;             /* White text for better contrast */
+}
+
+.time-box {
+    border: 1px solid #000;   /* Black border for time box */
+    padding: 2em;             /* Padding for inner spacing */
+    margin-bottom: 0.5em;     /* Reduced margin below the time box */
+    box-sizing: border-box;   /* Include padding in width calculation */
+    width: 90%;              /* Full width of the container */
+    height: 300px;            /* Set a fixed height for scrollable content */
+    overflow-y: auto;         /* Enable vertical scrolling if content exceeds height */
+    display: inline-block;
+}
+
+.time-picker {
+    display: grid;                        /* Grid layout for even spacing */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns per row */
+    column-gap: 10px;                      /* Space between columns */
+    row-gap: 20px;                         /* Increased space between rows for larger gap */
+    justify-items: center;                /* Center the grid items */
+    align-items: center;                  /* Align the grid items */
+}
+
+.time-slot {
+    background-color: #f0f0f0;  /* Light grey background */
+    color: #333;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.time-slot.selected {
+    background-color: #4CAF50;  /* Green background for selected */
+    color: #fff;                /* White text for contrast */
+}
+
+/* about us side */
+
+/* Container for the About Us Page */
+#about-container {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+/* Title for About Us Page */
+.about-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling the About Section Blocks */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+/* Individual block for text and image - default column for mobile */
+.about-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+}
+
+/* Styling for the left-aligned block with right-aligned image */
+.about-block-aligned {
+    display: flex;
+    flex-direction: row-reverse; /* Make the image aligned to the right */
+    align-items: center; 
+    gap: 1em; /* Space between the text and image */
+    width: 100%;
+    position: relative;
+}
+
+/* Green Background Block */
+.green-background-block {
+    position: absolute;
+    right: 0; /* Align it with the right edge of the container */
+    top: 50%; /* Align it vertically relative to the container */
+    transform: translateY(-50%); /* Center the green background vertically */
+    width: 275px; /* Slightly wider than the image to make it visible */
+    height: 367px; /* A bit shorter than the image for a good visual effect */
+    background-color: #17813F; /* Green color */
+    z-index: 0; /* Place behind the image */
+}
+
+/* Image Block */
+.about-image-block {
+    position: relative;
+    width: 196px;
+    height: 419px;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Make sure the image is above the green background */
+}
+
+/* Image Styling */
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Block */
+.about-text-block {
+    max-width: 175px;
+    text-align: right; /* Align text to the right side */
+    padding: 0.5em;
+    line-height: 1.8; /* Increased line height for better readability */
+    z-index: 2; /* Make sure text is above other elements */
+    margin-top: -60px; /* Move the text block slightly upwards for better centering */
+}
+
+/* Heading Styling within the Text Block */
+.about-text-block h2 {
+    font-size: 70px;  /* Set heading next to the image to 70px */
+    margin-bottom: -30px; /* Set margin-bottom to 0 to minimize the gap between the heading and text */
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+}
+
+/* Normal Text Styling */
+.about-description {
+    font-size: 15px; /* Set normal text to 15px */
+    color: black;
+    line-height: 1.8; /* Increased line height for readability */
+    margin-top: 0; /* Remove margin to align text closely with the heading */
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+}
+
+/* Container for the new Urban Culture Section */
+#urban-culture-container {
+    width: 100%;
+    max-width: 100vw; /* Ensures full viewport width */
+    margin-top: 5rem; /* Removes any default margin */
+    padding: 0; /* Removes any padding around the container */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Remove padding and margin for full-width image */
+.urban-culture-section {
+    padding: 0; /* Remove padding inside this section */
+    margin: 0; /* Remove any margin that could affect width */
+}
+
+/* Image Block */
+.urban-culture-image-block {
+    width: 100%;
+    position: relative; /* Create a stacking context */
+    overflow: visible; /* Ensure nothing is cut off */
+}
+
+/* Image Styling */
+.urban-culture-image {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    object-fit: cover;
+    display: block;
+}
+
+/* Title Styling (positioned halfway over the top of the image) */
+.urban-culture-title {
+    position: absolute;
+    top: -1.4em; /* Adjust this to control overlap */
+    right: 1rem;
+    font-size: 5em;
+    font-weight: bold;
+    color: #000; /* Set title color to black */
+    z-index: 10; /* Ensures the title is above the image */
+    text-align: right;
+}
+
+
+/* Text Block Below the Image */
+.urban-culture-text-block {
+    max-width: 600px;
+    margin: 0em auto 0; /* Center it below the image */
+    text-align: left;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    line-height: 1.6;
+}
+
+.urban-culture-description {
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.8;
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+    margin: 2rem 1rem 3rem 1rem;
+}
+
+/* log in side */
+
+.logincontainer {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join-title {
+    font-size: 4.5rem;
+    margin: 8rem 0 0 0;
+}
+
+.join-subtitle {
+    font-size: 2rem;
+    margin: 1rem 1rem 4rem 1rem;
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+}
+
+.login-box {
+    border: 1px solid #000;
+    padding: 1.5em;
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 4rem;
+    text-align: center;
+    align-self: center;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 10px;
+}
+
+.social-button {
+    border: none;
+    padding: 0;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.social-button.google {
+    color: #333;
+    width: 70%;
+    gap: 10px;
+    font-size: 16px; /* Increased font size for Google sign-in text */
+}
+
+.social-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.social-button.facebook,
+.social-button.apple {
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.social-button img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.login-label {
+    font-size: 1em;
+    display: block;
+    margin: 0.5em 0 1em; /* Increased bottom margin for larger gap between label and input field */
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    margin-bottom: 1.2em; /* Slightly increased bottom margin for a larger gap between fields */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1em;
+}
+
+.forgot-password-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.sign-in-button {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8em;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 0.8em;
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.signup-link-button {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* call to action kanp */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    width: 15.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.cart-centrer {
+    text-align: center;
+}
+
+.cta-button-book {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+    width: 18rem;
+    height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.add-to-cart {
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* indkøbskurv */
+
+.indkøbs-overskrift {
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 2.8rem;
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+hr {
+    width: 80%;
+    border: none;
+    border-top: 1px solid #000;
+    margin: 1rem auto;
+}
+
+.indkøbs-underoverskrift {
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    margin-bottom: 10rem;
+}
+
+/* styling af footer */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 0rem 0rem 1.5rem;
+}
+
+h3 {
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 0 0 1rem;
+}
+
+.ikoner img {
+    width: 2.5rem;
+    height: auto;
+    padding: 0.5rem;
+    margin-left: 0.2rem;
+}
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+.footer-text {
+    padding: 5rem 0 0.5rem 1rem;
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+}
+
+.copyright {
+    padding: 0 1rem 1rem 0;
+    text-align: right;
+    margin: 0;
+    font-family: 'Inter_18pt-Light', Arial, Helvetica, sans-serif;
+}
+
+
+
+/* media quaries */
+
+@media (min-width: 1025px) {
+   
+    /* menu */
+
+    .burger-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex; 
+        flex-direction: row; 
+        position: static; 
+        background-color: transparent;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .logo img {
+        height: 100px;
+        width: auto;
+    }
+
+    .cart {
+        display: block;
+    }
+
+    .cart-icon img {
+        display: none;
+    }
+
+    .login {
+        margin-top: 0.5rem;
+    }
+
+    /* eventside */
+
+    .event-billede {
+        width: 110%;
+    }
+
+    .event-tid {
+        width: 85%;
+        margin-left: 4rem;
+        margin-top: 116%;
+    }
+
+    .event-tid2 {
+        width: 85%;
+        margin: 0;
+        margin-left: 4rem;
+        margin-top: 120.5%;
+    }
+
+    .event-tid3 {
+        width: 85%;
+        margin: 0;
+        margin-left: 4rem;
+        margin-top: 123%;
+    }
+    
+    .event-container h1 {
+        font-size: 10rem;
+        margin-top: 12rem;
+        position: absolute;
+        margin-left: 3rem;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* login side */
+
+    .logincontainer {
+        display: grid;
+        grid-template-columns: 1fr 539px; /* Text section takes up remaining space, login-box fixed size */
+        gap: 50px;
+        align-items: center; /* Vertically centers text-content with the login-box */
+        height: 100vh; /* Full height to keep content centered vertically */
+        margin: 0 13rem 0 10rem;
+    }
+
+    .join-title {
+        font-size: 6rem; /* Make text larger on larger screens */
+        margin-top: 0;
+    }
+
+    .join-subtitle {
+        font-size: 2rem; /* Make subtitle larger for better readability */
+        margin-bottom: 2em; /* Adjusted to align better with larger layout */
+    }
+
+    .login-box {
+        width: 539px;
+        height: 587px;
+        padding: 2em;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Social buttons styling for larger screens */
+    .social-login {
+        gap: 20px; /* Increase gap between buttons for larger screens */
+    }
+
+    .social-button {
+        height: 55px; /* Increased height for larger screens */
+    }
+
+    .social-button.google {
+        gap: 15px; /* More spacing between icon and text */
+        font-size: 16px; /* Updated font size to 16px for larger screens */
+    }
+
+    .social-button.facebook,
+    .social-button.apple {
+        width: 55px; /* Make Facebook and Apple buttons larger */
+        height: 55px; /* Make buttons taller */
+    }
+
+    .social-button img {
+        width: 25px;  /* Larger icons for larger buttons */
+        height: 25px; /* Set height to match width */
+    }
+
+    /* Login input and button styling for larger screens */
+    .login-input {
+        height: 55px; /* Increased input field height */
+        padding: 0.8em; /* More padding for larger height */
+    }
+
+    .sign-in-button {
+        height: 55px; /* Increased height for the sign-in button */
+        padding: 0.8em;
+        margin-top: 2.5em;
+    }
+
+    .login-label {
+        margin: 1.5em 0 1.5em; /* Larger gap between label and input for better readability */
+    }
+
+    .forgot-password {
+        margin-top: -0.5em;
+    } 
+}
+
+    @media (min-width: 768px) {
+
+        /* shop side */
+
+    .shop-overskrift {
+        font-size: 10rem;
+        margin-left: 10%;
+        margin-top: 5rem;
+        margin-bottom: 0;
+        text-align: start;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30rem;
+        gap: 0px;
+        margin: 11rem 17% 2rem 17%;
+    }
+
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30rem;
+        gap: 0px;
+        margin: 0 17% 2rem 17%;
+    }
+
+    .skateboard-billede {
+        height: auto;
+        width: 80%;
+    }
+    
+    .underoverskrift-2 {
+        display: none;
+    }
+
+    .underoverskrift {
+        top: 30rem;
+        font-size: 6rem;
+    }
+
+    .cta-button {
+        width: 68%;
+    }
+
+    .underoverskrift-desktop {
+        text-align: center;
+        display: block;
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+
+    .text-desktop {
+        font-family: 'PPNeueMachina-Light', Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        margin-left: 10%;
+        display: block;
+        margin-top: 0;
+    }
+
+    /* eventside */
+
+    .eventside-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 12rem 17% 2rem 38%;
+    }
+
+    /* indkøbskurv */
+
+    .indkøbs-overskrift {
+        font-size: 5rem;
+    }
+
+    .indkøbs-underoverskrift {
+        font-size: 2rem;
+    }
+
+    hr {
+        width: 60%;
+    }
+
+    /* forside */ 
+
+    .boards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .lyc-content {
+        grid-template-columns: 1fr 1fr;
+    }
+  
+    .add-to-cart {
+        width: auto;
+    }
+  
+    .lyc-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  
+    .lyc-text {
+      padding: 3rem;
+    }
+  
+    .lyc-image img {
+      max-width: 100%;
+      height: 35rem;
+    }
+  
+    .hero {
+      height: 80vh; 
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+      }
+
+      .hero-video {
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+    /* about us side */
+
+    /* Keep containers vertically stacked */
+    #about-container, #urban-culture-container {
+        display: block; /* Ensure sections are stacked */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* About Section Adjustments */
+    .about-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; /* Align the whole section to the right */
+        gap: 2em;
+        position: relative;
+        margin-bottom: 10rem;
+    }
+
+    /* Green Background Positioned Independently */
+    .green-background-block {
+        position: absolute;
+        left: 450px;
+        top: 400px;
+        width: 909px;
+        height: 703px;
+        background-color: #17813F;
+        z-index: 0;
+    }
+
+     /* Image Block - Positioned Independently */
+     .about-image-block {
+        width: 719px;
+        height: 790px;
+        position: relative;
+        z-index: 1;
+        left: 50px;
+    }
+
+    /* Image Styling */
+    .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Text Block Styling */
+    .about-text-block {
+        max-width: 447px; /* Limit width of text box */
+        text-align: right;
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+        position: relative;
+        z-index: 1;
+        margin-right: -30px; /* Position text block close to the image */
+    }
+
+    /* Title Styling */
+    .about-text-block h2 {
+        font-size: 8rem;
+        font-weight: bold;
+        margin: 0; /* Remove margin around title */
+    }
+
+    .about-description {
+        font-size: 1.6rem;
+        color: black;
+        line-height: 2; /* Increased line height for readability */
+        margin-top: -2rem; /* Remove margin to align text closely with the heading */
+    }
+
+    /* Urban Culture Section Adjustments */
+    #urban-culture-container {
+        text-align: center; /* Center-align the title */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align all items within */
+        margin: 0 auto;
+    }
+
+    /* Centered Title Above Image and Text */
+    .urban-culture-title {
+        font-size: 8rem; /* Large font size for title */
+        font-weight: bold;
+        margin: 0 auto 2rem; /* Center and add space below title */
+        left: 300px;
+        margin-top: 130px;
+    }
+
+     /* Layout for Image and Text Side by Side */
+     .urban-culture-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0; /* Set gap to 0 for no space between image and text */
+    }
+
+    /* Image Block Styling */
+    .urban-culture-image-block {
+        width: 517px; /* Set specific width */
+        height: 489px; /* Set specific height */
+        display: flex;
+        justify-content: flex-start; /* Align image to the left */
+    }
+
+    .urban-culture-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Text Block Styling */
+    .urban-culture-text-block {
+        max-width: 447px; /* Set maximum width for text block */
+        text-align: left; /* Left-align text inside the block */
+        padding-top: 80px;
+        margin-bottom: 10rem;
+    }
+
+    /* Description Text Styling */
+    .urban-culture-description {
+        font-size: 1.6rem;
+        color: black;
+        line-height: 2;
+        margin: 0; /* Remove default margin */
+    }
+
+    .about-overskrift {
+        display: none;
+    }
+
+    .about-overskrift-desktop {
+        display: block;
+        text-align: end;
+        font-size: 8rem;
+        margin: 4rem 14% 3rem 0;
+    }
+
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    h1 {
+        font-size: 2.7em;
+    }
+
+    .underoverskrift {
+        top: 26rem;
+        font-size: 6rem;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        margin: 1.2em 0 0.8em;  
+        text-align: left; /* Align section titles to the left */
+        width: 100%;
+        max-width: 550px;  /* Align it with the box width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .calendar-box,
+    .time-box {
+        width: 90%;
+        max-width: 550px;     
+        padding: 1.5em;  
+        margin-bottom: 1em;
+        margin-left: auto;   
+        margin-right: auto;  
+        height: 400px;  /* Set a consistent height for the time box */
+    }
+
+    .calendar-header {
+        gap: 15px;
+    }
+
+    .month-dropdown,
+    .year-dropdown {
+        font-size: 15px;
+        padding: 6px 15px;
+    }
+
+    .calendar-date {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .time-slot {
+        height: 50px;
+        width: 110px;
+    }
+
+    .time-picker {
+        row-gap: 25px;
+    }
+
+    .indkøbs-underoverskrift {
+        margin-bottom: 14rem;
+    }
+
+    .indkøbs-overskrift {
+        margin-top: 14rem;
+    }
+
+    .event-container h1 {
+        font-size: 8rem;
+    }
+
+    .eventside-container {
+        margin: 1rem 10% 2rem 18%;
+    }
+
+    .event-tid {
+        margin-left: 0;
+        margin-top: 79%;
+    }
+
+    .event-tid2 {
+        margin-left: 0;
+        margin-top: 82%;
+    }
+
+    .event-tid3 {
+        margin-left: 0;
+        margin-top: 84%;
+    }
+
+    /* login side */
+
+    .logincontainer {
+        text-align: center;
+        display: flex;
+    }
+
+    .join-title {
+        font-size: 6rem; /* Slightly larger text for mid-size screens */
+    }
+
+    .join-subtitle {
+        font-size: 2rem; /* Slightly larger subtitle */
+        margin: 2rem 3rem 3rem 3rem;
+    }
+
+    .login-box {
+        width: 80%;
+        height: auto;
+        padding: 1.8em;
+        box-sizing: border-box;
+        align-self: center;
+        margin-bottom: 3rem;
+    }
+
+    /* Social buttons styling for mid-size screens */
+    .social-login {
+        gap: 15px; /* Smaller gap between buttons for mid-size screens */
+    }
+
+    .social-button {
+        height: 50px; /* Increased height for mid-size screens */
+    }
+
+    .social-button.google {
+        gap: 12px; /* Adjusted spacing between icon and text */
+        font-size: 14px; /* Slightly smaller font size for mid-size screens */
+    }
+
+    .social-button.facebook,
+    .social-button.apple {
+        width: 50px; /* Increased width for mid-size buttons */
+        height: 50px; /* Increased height for mid-size buttons */
+    }
+
+    .social-button img {
+        width: 22px;  /* Adjusted icon size */
+        height: 22px; /* Set height to match width */
+    }
+
+    /* Login input and button styling for mid-size screens */
+    .login-input {
+        height: 50px; /* Increased input field height */
+        padding: 0.7em; /* Adjusted padding */
+    }
+
+    .sign-in-button {
+        height: 50px; /* Increased height for the sign-in button */
+        padding: 0.7em;
+        margin-top: 2em; /* Slightly smaller margin */
+    }
+
+    .login-label {
+        margin: 1.2em 0 1em; /* Larger gap between label and input */
+    }
+
+    .forgot-password {
+        margin-top: -0.3em; /* Adjusted spacing for mid-size screens */
+    }
+
+    .green-background-block {
+        width: 20rem;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    #booking-container {
+        max-width: 765px;
+        width: 85%;
+        text-align: center;
+    }
+
+    .book-overskrift {
+        font-size: 8rem;
+    }
+
+    .book-underoverskrift {
+        font-family: 'PPNeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem; 
+        text-align: left; /* Align section titles to the left */
+        width: 100%;
+        max-width: 50rem;  /* Align it with the box width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .calendar-box,
+    .time-box {
+        width: 90%;
+        max-width: 50rem;     
+        padding: 1.5em;  
+        margin-bottom: 1em;
+        margin-left: auto;   
+        margin-right: auto;  
+        height: 400px;  /* Set a consistent height for the time box */
+    }
+
+    .calendar-header {
+        gap: 15px;
+    }
+
+    .month-dropdown,
+    .year-dropdown {
+        font-size: 15px;
+        padding: 6px 15px;
+    }
+
+    .calendar-date {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .time-slot {
+        height: 50px;
+        width: 110px;
+    }
+
+    .time-picker {
+        row-gap: 25px;
+    }
+
+}
